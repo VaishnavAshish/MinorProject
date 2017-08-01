@@ -11,6 +11,9 @@
 <!-- Meta tag Keywords -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script src="../bower_components/angular/angular.min.js">
+	
+</script>
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
 function hideURLbar(){ window.scrollTo(0,1); } </script>
 <!--// Meta tag Keywords -->
@@ -27,7 +30,9 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 <link href="//fonts.googleapis.com/css?family=Athiti:200,300,400,500,600,700&amp;subset=latin-ext,thai,vietnamese" rel="stylesheet">
 <!-- //online-fonts -->
 </head>
-<body> 
+
+
+<body ng-app> 
 <!-- banner -->
 <div class="main-agile">
 	<div class="banner">
@@ -48,8 +53,8 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 						<ul class="nav navbar-nav">
 							<li><a class="active" href="index.html">Home</a></li>
 							<li><a href="#about" class="scroll">About</a></li>
-							<li><a href="#services" class="scroll">Login</a></li>
-							<li><a href="#faculties" class="scroll">Register</a></li>
+							<li><a href="javascript::" ng-click="lr.loginform=true" data-target="#myModal" data-toggle="modal" class="scroll">Login</a></li>
+							<li><a href="#faculties"  ng-click="lr.loginform=false" data-target="#myModal" data-toggle="modal" class="scroll">Register</a></li>
 							
 						</ul>
 						<div class="clearfix"> </div>							
@@ -91,6 +96,44 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 		</div>
 	</div>
 	<!-- //banner -->	
+
+<!--login register model-->
+<div>
+	<div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div ng-if="lr.loginform" class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Modal Header</h4>
+        </div>
+        <div class="modal-body">
+          <p>Some text in the modal111111.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+	  </div>
+	  
+	    <div ng-if="!lr.loginform" class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Modal Header</h4>
+        </div>
+        <div class="modal-body">
+          <p>Some text in the modal2222222222.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  </div>
+<!--model end-->
+
 	<!-- Grids -->
 	<div class="grid-w3">
 		<div class="container">
