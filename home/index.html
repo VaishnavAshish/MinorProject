@@ -18,6 +18,7 @@
 
 	<script src="../bower_components/angular/angular.min.js"></script>
 	<script src="angular/app.js"></script>
+	<script src="angular/index.ctrl.js"></script>
 
 
 
@@ -25,7 +26,7 @@
 
 	<script type="application/x-javascript">
 		addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
-function hideURLbar(){ window.scrollTo(0,1); }
+		function hideURLbar(){ window.scrollTo(0,1); }
 	</script>
 	<!--// Meta tag Keywords -->
 	<!-- css files -->
@@ -118,7 +119,7 @@ function hideURLbar(){ window.scrollTo(0,1); }
 		<!--login register model-->
 		<div>
 			<div class="modal fade" id="myModal" role="dialog">
-				<div ng-controller="indexCtrl as login" class="modal-dialog" style="width:50%; margin-top:90px; margin-left:auto; margin-right:auto;">
+				<div ng-controller="indexCtrl as login" class="modal-dialog" style="min-width: 300px;width:50%; margin-top:90px; margin-left:auto; margin-right:auto;">
 
 					<!-- Modal content-->
 					<div ng-if="lr.loginform" class="modal-content">
