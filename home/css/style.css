@@ -2157,5 +2157,11 @@ section.stats p.text-center {
 	ul.nav.navbar-nav li {
 		margin: .9em 0;
 	}
+	.show{
+		display:block;
+	}
+	.hide{
+		display:none;
+	}
 }
 /*--//responsive--*/
